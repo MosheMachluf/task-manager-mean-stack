@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "start:watch": "nodemon server"
+    "start:watch": "nodemon server",
+    "postinstall": "cd client && ng build --aot --prod"
   },
   "engines": {
     "node": "12.18.3",
