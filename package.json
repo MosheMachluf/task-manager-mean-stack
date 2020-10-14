@@ -8,6 +8,10 @@
     "start:watch": "nodemon server",
     "postinstall": "cd client && ng build --aot --target:production"
   },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
