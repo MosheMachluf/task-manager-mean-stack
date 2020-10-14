@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "start:watch": "nodemon server",
-    "postinstall": "npm install && cd client && ng build --aot --prod"
+    "start:watch": "nodemon server"
   },
   "engines": {
     "node": "12.18.3",
@@ -16,9 +15,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angular/cli": "~9.1.6",
-    "@angular/compiler-cli": "~9.1.7",
-    "@angular-devkit/build-angular": "~0.901.6",
     "typescript": "~3.8.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
