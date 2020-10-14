@@ -20,7 +20,6 @@ export class LoginPageComponent implements OnInit {
         if (res.status === 200) {
           this.router.navigate(['/']);
         }
-        console.log(res);
       });
   }
 }

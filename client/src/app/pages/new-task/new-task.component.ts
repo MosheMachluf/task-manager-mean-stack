@@ -27,7 +27,6 @@ export class NewTaskComponent implements OnInit {
   }
 
   createNewTask(title: string) {
-    console.log(this.listId);
 
     this.tasksService
       .createTask(title, this.listId)

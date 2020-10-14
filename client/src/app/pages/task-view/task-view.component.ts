@@ -48,22 +48,22 @@ export class TaskViewComponent implements OnInit {
   }
 
   onTaskDelete(taskId: string) {
-    this.tasksService
+    if(confirm('Are you sure you want to delete?')) {
+      this.tasksService
       .deleteTask(this.selectedListId, taskId)
       .subscribe((res: any) => {
         this.tasks = this.tasks.filter((task) => task._id !== taskId);
-        console.log(res);
       });
+    }
   }
 
   onDeleteList() {
     if (confirm('Are you sure you want to delete?')) {
       this.tasksService
-        .deleteList(this.selectedListId)
-        .subscribe((res: any) => {
-          this.router.navigate(['/lists']);
-          console.log('response from delete Task ', res);
-        });
+      .deleteList(this.selectedListId)
+      .subscribe((res: any) => {
+        this.router.navigate(['/lists']);
+      });
     }
   }
 

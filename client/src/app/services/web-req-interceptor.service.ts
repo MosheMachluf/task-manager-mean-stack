@@ -31,7 +31,6 @@ export class WebReqInterceptorService implements HttpInterceptor {
               return next.handle(request);
             }),
             catchError((err: any) => {
-              console.log(err);
               this.authService.logout();
               return empty();
             })
