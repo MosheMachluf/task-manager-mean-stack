@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "start:watch": "nodemon server",
-    "postinstall": "cd client && ng build --aot --target:production"
+    "postinstall": "cd client && npm run build --aot --prod"
   },
   "engines": {
     "node": "12.18.3",
