@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "start:watch": "nodemon server",
-    "postinstall": "cd client && npm install && ng build --aot --prod"
+    "start:watch": "nodemon server"
   },
   "keywords": [],
   "author": "",
