@@ -51,6 +51,7 @@ app.use("/api/users", usersRoutes);
 // app.use((req, res) => {
 //   res.status(404).send("404 - Page Not Found");
 // });
+
 if(process.env.NODE_ENV == 'production') {
   app.use(express.static(path.join(__dirname, "client/dist/client")));
   

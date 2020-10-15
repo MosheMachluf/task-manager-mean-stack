@@ -11,14 +11,19 @@ import { Router } from '@angular/router';
 export class LoginPageComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
 
+  public error:string = '';
+
   ngOnInit(): void {}
 
   onLogin(email: string, password: string) {
     this.authService
       .login(email, password)
       .subscribe((res: HttpResponse<any>) => {
+
         if (res.status === 200) {
           this.router.navigate(['/']);
+        } else {
+          this.error = 'Email or Password is invalid';
         }
       });
   }
